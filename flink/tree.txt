@@ -1,0 +1,1308 @@
+[info] welcome to sbt 1.12.4 (Eclipse Adoptium Java 11.0.25)
+[info] loading settings for project flink-build from assembly.sbt...
+[info] loading project definition from /home/alex/IdeaProjectsMy/pipeline-example/flink/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to flink (in build file:/home/alex/IdeaProjectsMy/pipeline-example/flink/)
+[info] flink:flink_3:0.1.0-SNAPSHOT
+[info]   +-ch.qos.logback:logback-classic:1.5.32
+[info]   | +-ch.qos.logback:logback-core:1.5.32
+[info]   | +-org.slf4j:slf4j-api:2.0.17
+[info]   | 
+[info]   +-com.github.pureconfig:pureconfig-core_3:0.17.10
+[info]   | +-com.typesafe:config:1.4.5
+[info]   | +-org.scala-lang:scala3-library_3:3.3.7 (evicted by: 3.8.2)
+[info]   | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | 
+[info]   +-com.typesafe.scala-logging:scala-logging_3:3.9.6
+[info]   | +-org.scala-lang:scala3-library_3:3.3.5 (evicted by: 3.8.2)
+[info]   | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | +-org.slf4j:slf4j-api:2.0.17
+[info]   | 
+[info]   +-io.circe:circe-core_3:0.14.15
+[info]   | +-io.circe:circe-numbers_3:0.14.15
+[info]   | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | 
+[info]   | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | +-org.typelevel:cats-core_3:2.13.0
+[info]   |   +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   |   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   |   +-org.typelevel:cats-kernel_3:2.13.0
+[info]   |     +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   |     +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   |     
+[info]   +-io.circe:circe-generic_3:0.14.15
+[info]   | +-io.circe:circe-core_3:0.14.15
+[info]   | | +-io.circe:circe-numbers_3:0.14.15
+[info]   | | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | | 
+[info]   | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | +-org.typelevel:cats-core_3:2.13.0
+[info]   | |   +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | |   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | |   +-org.typelevel:cats-kernel_3:2.13.0
+[info]   | |     +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | |     +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | |     
+[info]   | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | 
+[info]   +-io.circe:circe-parser_3:0.14.15
+[info]   | +-io.circe:circe-core_3:0.14.15
+[info]   | | +-io.circe:circe-numbers_3:0.14.15
+[info]   | | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | | 
+[info]   | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | +-org.typelevel:cats-core_3:2.13.0
+[info]   | |   +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | |   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | |   +-org.typelevel:cats-kernel_3:2.13.0
+[info]   | |     +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | |     +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | |     
+[info]   | +-io.circe:circe-jawn_3:0.14.15
+[info]   | | +-io.circe:circe-core_3:0.14.15
+[info]   | | | +-io.circe:circe-numbers_3:0.14.15
+[info]   | | | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | | | 
+[info]   | | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | | +-org.typelevel:cats-core_3:2.13.0
+[info]   | | |   +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | | |   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | |   +-org.typelevel:cats-kernel_3:2.13.0
+[info]   | | |     +-org.scala-lang:scala3-library_3:3.3.4 (evicted by: 3.8.2)
+[info]   | | |     +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | |     
+[info]   | | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | | +-org.typelevel:jawn-parser_3:1.6.0
+[info]   | |   +-org.scala-lang:scala3-library_3:3.3.3 (evicted by: 3.8.2)
+[info]   | |   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | |   
+[info]   | +-org.scala-lang:scala3-library_3:3.3.6 (evicted by: 3.8.2)
+[info]   | +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   | 
+[info]   +-org.apache.flink:flink-clients:2.2.0
+[info]   | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | +-commons-cli:commons-cli:1.5.0
+[info]   | +-org.apache.flink:flink-core:2.2.0
+[info]   | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | +-org.objenesis:objenesis:3.4
+[info]   | | | 
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-commons-collections:commons-collections:3.2.2
+[info]   | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | +-commons-io:commons-io:2.15.1
+[info]   | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | 
+[info]   | +-org.apache.flink:flink-datastream:2.2.0
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-org.apache.flink:flink-datastream-api:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-streaming-java:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.commons:commons-math3:3.6.1
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-file-sink-common:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-runtime:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-cli:commons-cli:1.5.0
+[info]   | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-connector-datagen:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | | 
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-datastream-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-hadoop-fs:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | | | 
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | | 
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-queryable-state-client-java:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-rpc-akka-loader:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | | | 
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | | 
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-zookeeper-3:3.7.2-20.0
+[info]   | | | | +-org.javassist:javassist:3.24.0-GA
+[info]   | | | | +-org.lz4:lz4-java:1.8.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.xerial.snappy:snappy-java:1.1.10.7
+[info]   | | | | +-tools.profiler:async-profiler:2.9
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | 
+[info]   | +-org.apache.flink:flink-runtime:2.2.0
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-commons-cli:commons-cli:1.5.0
+[info]   | | +-commons-io:commons-io:2.15.1
+[info]   | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-connector-datagen:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | 
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-datastream-api:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-hadoop-fs:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-queryable-state-client-java:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-rpc-akka-loader:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | +-org.apache.flink:flink-shaded-zookeeper-3:3.7.2-20.0
+[info]   | | +-org.javassist:javassist:3.24.0-GA
+[info]   | | +-org.lz4:lz4-java:1.8.0
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | +-org.xerial.snappy:snappy-java:1.1.10.7
+[info]   | | +-tools.profiler:async-profiler:2.9
+[info]   | | 
+[info]   | +-org.apache.flink:flink-streaming-java:2.2.0
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-org.apache.commons:commons-math3:3.6.1
+[info]   | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | 
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-file-sink-common:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-runtime:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-commons-cli:commons-cli:1.5.0
+[info]   | | | +-commons-io:commons-io:2.15.1
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-connector-datagen:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-datastream-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-hadoop-fs:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | | 
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-queryable-state-client-java:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-rpc-akka-loader:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | | 
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | | 
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-zookeeper-3:3.7.2-20.0
+[info]   | | | +-org.javassist:javassist:3.24.0-GA
+[info]   | | | +-org.lz4:lz4-java:1.8.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | +-org.xerial.snappy:snappy-java:1.1.10.7
+[info]   | | | +-tools.profiler:async-profiler:2.9
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | 
+[info]   | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | +-org.slf4j:slf4j-api:2.0.17
+[info]   | 
+[info]   +-org.apache.flink:flink-connector-base:2.2.0
+[info]   | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | +-org.slf4j:slf4j-api:2.0.17
+[info]   | 
+[info]   +-org.apache.flink:flink-connector-kafka:4.0.1-2.0
+[info]   | +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | +-com.fasterxml.jackson.core:jackson-databind:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-annotations:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | | 
+[info]   | +-com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-databind:2.18.2
+[info]   | |   +-com.fasterxml.jackson.core:jackson-annotations:2.18.2
+[info]   | |   +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | |   
+[info]   | +-com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-annotations:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | | +-com.fasterxml.jackson.core:jackson-databind:2.18.2
+[info]   | |   +-com.fasterxml.jackson.core:jackson-annotations:2.18.2
+[info]   | |   +-com.fasterxml.jackson.core:jackson-core:2.18.2
+[info]   | |   
+[info]   | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | +-org.apache.kafka:kafka-clients:3.9.1
+[info]   |   +-com.github.luben:zstd-jni:1.5.6-4
+[info]   |   +-org.lz4:lz4-java:1.8.0
+[info]   |   +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   |   +-org.slf4j:slf4j-api:2.0.17
+[info]   |   +-org.xerial.snappy:snappy-java:1.1.10.5 (evicted by: 1.1.10.7)
+[info]   |   +-org.xerial.snappy:snappy-java:1.1.10.7
+[info]   |   
+[info]   +-org.apache.flink:flink-streaming-java:2.2.0
+[info]   | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | +-org.apache.commons:commons-math3:3.6.1
+[info]   | +-org.apache.flink:flink-core:2.2.0
+[info]   | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | +-org.objenesis:objenesis:3.4
+[info]   | | | 
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-commons-collections:commons-collections:3.2.2
+[info]   | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | +-commons-io:commons-io:2.15.1
+[info]   | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | 
+[info]   | +-org.apache.flink:flink-file-sink-common:2.2.0
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | 
+[info]   | +-org.apache.flink:flink-runtime:2.2.0
+[info]   | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | +-commons-cli:commons-cli:1.5.0
+[info]   | | +-commons-io:commons-io:2.15.1
+[info]   | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-connector-datagen:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | 
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-datastream-api:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-hadoop-fs:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-queryable-state-client-java:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-rpc-akka-loader:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.apache.flink:flink-core:2.2.0
+[info]   | | | | +-com.esotericsoftware:kryo:5.6.2
+[info]   | | | | | +-com.esotericsoftware:minlog:1.3.1
+[info]   | | | | | +-com.esotericsoftware:reflectasm:1.11.9
+[info]   | | | | | +-org.objenesis:objenesis:3.4
+[info]   | | | | | 
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-commons-collections:commons-collections:3.2.2
+[info]   | | | | +-org.apache.commons:commons-compress:1.26.0
+[info]   | | | | | +-commons-io:commons-io:2.15.1
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.14.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | +-org.apache.commons:commons-text:1.10.0
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.12.0 (evicted by: 3.18.0)
+[info]   | | | | | +-org.apache.commons:commons-lang3:3.18.0
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-core-api:2.2.0
+[info]   | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.apache.flink:flink-metrics-core:2.2.0
+[info]   | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | +-org.apache.flink:flink-annotations:2.2.0
+[info]   | | | | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | | 
+[info]   | | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | | 
+[info]   | | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | | 
+[info]   | | | | +-org.apache.flink:flink-shaded-asm-9:9.6-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | +-org.snakeyaml:snakeyaml-engine:2.6
+[info]   | | | | 
+[info]   | | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | | 
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-rpc-core:2.2.0
+[info]   | | | +-com.google.code.findbugs:jsr305:1.3.9
+[info]   | | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | | 
+[info]   | | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | | +-org.apache.flink:flink-shaded-jackson:2.18.2-20.0
+[info]   | | +-org.apache.flink:flink-shaded-netty:4.1.100.Final-20.0
+[info]   | | +-org.apache.flink:flink-shaded-zookeeper-3:3.7.2-20.0
+[info]   | | +-org.javassist:javassist:3.24.0-GA
+[info]   | | +-org.lz4:lz4-java:1.8.0
+[info]   | | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | | +-org.slf4j:slf4j-api:2.0.17
+[info]   | | +-org.xerial.snappy:snappy-java:1.1.10.7
+[info]   | | +-tools.profiler:async-profiler:2.9
+[info]   | | 
+[info]   | +-org.apache.flink:flink-shaded-guava:33.4.0-jre-20.0
+[info]   | +-org.slf4j:slf4j-api:1.7.36 (evicted by: 2.0.17)
+[info]   | +-org.slf4j:slf4j-api:2.0.17
+[info]   | 
+[info]   +-org.scala-lang:scala3-library_3:3.8.2 [S]
+[info]   
+[success] Total time: 3 s, completed Mar 3, 2026, 5:22:06 PM

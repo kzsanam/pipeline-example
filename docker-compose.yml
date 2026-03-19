@@ -1,0 +1,272 @@
+services:
+  generator-flink:
+    build:
+      context: ./flink
+      dockerfile: Dockerfile
+    image: flink-job:latest
+    container_name: generator_flink
+    environment:
+      - JOB_NAME=generator
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - OUTPUT_TOPIC=raw-data
+      - GENERATE_PER_SECOND=1
+    depends_on:
+      - kafka
+      - kafka-init
+    networks:
+      - pipeline
+    command: "generator-application.conf"
+
+  transformer-flink:
+    build:
+      context: ./flink
+      dockerfile: Dockerfile
+    image: flink-job:latest
+    container_name: transformer_flink
+    environment:
+      - JOB_NAME=transformer
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - INPUT_TOPIC=raw-data
+      - OUTPUT_TOPIC=transformed-data
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+    networks:
+      - pipeline
+    command: "transformer-application.conf"
+
+  writer-flink:
+    build:
+      context: ./flink
+      dockerfile: Dockerfile
+    image: flink-job:latest
+    container_name: writer_flink
+    environment:
+      - JOB_NAME=writer
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - INPUT_TOPIC=transformed-data
+      - ENDPOINT=http://dynamodb-local:8000
+      - KEY=fakeMyKeyId
+      - SECRET=fakeSecretAccessKey
+      - TABLE=PersonTable
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+      dynamodb-init:
+        condition: service_completed_successfully
+      kafka-init:
+        condition: service_completed_successfully
+    networks:
+      - pipeline
+    command: "writer-application.conf"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: api:latest
+    container_name: api
+    environment:
+      - DB_ENDPOINT=http://dynamodb-local:8000
+    ports:
+      - "58080:58080"
+
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+      dynamodb-init:
+        condition: service_completed_successfully
+      kafka-init:
+        condition: service_completed_successfully
+    networks:
+      - pipeline
+
+  kafka:
+    image: confluentinc/cp-kafka:8.0.0
+    hostname: kafka
+    ports:
+      - "29092:29092"
+      - "29093:29093"
+      - "9092:9092"
+      - "9101:9101"
+    environment:
+      KAFKA_NODE_ID: 1
+      CLUSTER_ID: dmp-docker-compose
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://kafka:9092
+      KAFKA_LISTENERS: 'PLAINTEXT://kafka:29092,CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:9092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_MS: 3000
+      KAFKA_PROCESS_ROLES: broker,controller
+    networks:
+      - pipeline
+
+  kafka-init:
+    image: confluentinc/cp-kafka:8.0.0
+    depends_on:
+      - kafka
+    restart: "no"
+    entrypoint: [ '/bin/sh', '-c' ]
+    command: |
+      "
+      # blocks until kafka is reachable
+      kafka-topics --bootstrap-server kafka:9092 --list
+
+      echo -e 'Creating kafka topics'
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic raw-data --replication-factor 1 --partitions 1
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --topic transformed-data --replication-factor 1 --partitions 1
+      echo -e 'Successfully created the following topics:'
+      kafka-topics --bootstrap-server kafka:9092 --list
+      "
+    networks:
+      - pipeline
+
+  connect:
+    image: confluentinc/cp-kafka-connect:8.0.0
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+    ports:
+      - "8083:8083"   # Kafka Connect REST API
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: kafka:9092
+      CONNECT_REST_ADVERTISED_HOST_NAME: connect
+      CONNECT_GROUP_ID: "connect-cluster"
+      CONNECT_CONFIG_STORAGE_TOPIC: "connect-configs"
+      CONNECT_OFFSET_STORAGE_TOPIC: "connect-offsets"
+      CONNECT_STATUS_STORAGE_TOPIC: "connect-status"
+      CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_KEY_CONVERTER_SCHEMAS_ENABLE: "false"
+      CONNECT_VALUE_CONVERTER_SCHEMAS_ENABLE: "false"
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_PLUGIN_PATH: "/home/alex/IdeaProjectsMy/pipeline-example/connect-plugins"
+    volumes:
+      - ./connect-plugins:/home/alex/IdeaProjectsMy/pipeline-example/connect-plugins
+    networks:
+      - pipeline
+
+  create-s3-connector:
+    image: curlimages/curl:latest
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+    entrypoint:
+      - sh
+      - -c
+      - |
+        echo "Waiting for Kafka Connect...";
+        until curl -s http://connect:8083/ | grep 'version'; do
+          sleep 2;
+        done;
+        echo "Creating S3 sink connector...";
+        curl -X PUT http://connect:8083/connectors/s3-sink/config \
+             -H "Content-Type: application/json" \
+             -d '{
+                  "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+                  "tasks.max": "1",
+                  "topics": "transformed-data",
+                  "s3.bucket.name": "transformed-data",
+                  "flush.size": 200,
+                  "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+                  "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+                  "schema.compatibility": "NONE",
+                  "s3.region": "us-east-1",
+                  "aws.access.key.id": "minioadmin",
+                  "aws.secret.access.key": "minioadmin",
+                  "endpoint.url": "http://minio:9000",
+                  "store.url": "http://minio:9000",
+                  "s3.path.style.access.enabled": "true",
+                  "behavior.on.null.values": "ignore"
+             }'
+    restart: "no"
+    networks:
+      - pipeline
+
+  minio:
+    image: minio/minio:RELEASE.2025-09-07T16-13-09Z-cpuv1
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    restart: unless-stopped
+    networks:
+      - pipeline
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: minio-init
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      mc alias set local http://minio:9000 minioadmin minioadmin;
+      mc mb local/transformed-data || true;
+      mc mb local/aggregated-data || true;
+      "
+    restart: "no"
+    networks:
+      - pipeline
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8001:8000"
+    command: "-jar DynamoDBLocal.jar -inMemory -sharedDb"
+    healthcheck:
+      test: ["CMD-SHELL", '[ "$(curl -s -o /dev/null -I -w ''%{http_code}'' http://localhost:8000)" == "400" ]']
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    networks:
+      - pipeline
+
+  dynamodb-init:
+    image: amazon/aws-cli
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        aws dynamodb create-table \
+          --table-name PersonTable \
+          --attribute-definitions AttributeName=name,AttributeType=S \
+          --key-schema AttributeName=name,KeyType=HASH \
+          --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+          --endpoint-url http://dynamodb-local:8000 \
+          --region eu-central-1
+    environment:
+      AWS_ACCESS_KEY_ID: fakeMyKeyId
+      AWS_SECRET_ACCESS_KEY: fakeSecretAccessKey
+      AWS_DEFAULT_REGION: eu-central-1
+    networks:
+      - pipeline
+
+volumes:
+  minio-data:
+  mongodb_data:
+    driver: local
+
+networks:
+  pipeline:
+    name: pipeline
+    driver: bridge
